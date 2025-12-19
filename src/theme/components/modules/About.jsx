@@ -7,6 +7,7 @@ import {
 } from "@hubspot/cms-components/fields";
 import styles from "../../styles/about.module.css";
 import waterMission from "../../assets/squeeze.jpg";
+import storyImage from "../../assets/hands.jpg";
 
 export function Component({ fieldValues }) {
   const {
@@ -51,10 +52,10 @@ export function Component({ fieldValues }) {
       {/* ================= OUR STORY ================= */}
       <div className={styles.ourStoryBlock}>
         <h3>Our Story</h3>
-         <h5>From Source to Sip: The BaubaAqua Journey</h5>
+         <h5>From Source to Sip: The BaubAqua Journey</h5>
         <div className={styles.divider}>
         <img
-          src={"../../assets/hands.jpg"}
+          src={storyImage}
           alt="Our Story"
           className={styles.storyImage}
         />
@@ -70,7 +71,7 @@ export function Component({ fieldValues }) {
           <h4>Purely Balanced pH</h4>
           <p>
             pH levels greatly affect water’s taste and health benefits.
-            At BaubaAqua, we carefully balance our water’s pH between 6–8
+            At BaubAqua, we carefully balance our water’s pH between 6–8
             through advanced purification and mineralisation processes.
             This ensures a clean, refreshing taste that’s gentle on your body.
           </p>
@@ -81,7 +82,7 @@ export function Component({ fieldValues }) {
           <p>
             Our water contains carefully selected electrolytes such as
             potassium, calcium and magnesium to enhance hydration.
-            This mineral balance gives BaubaAqua its crisp taste and
+            This mineral balance gives BaubAqua its crisp taste and
             supports everyday wellness.
           </p>
         </div>
@@ -137,7 +138,7 @@ export function Component({ fieldValues }) {
        <div className={styles.valuesWrapper1}>
         <h3>Ready To Drink? Order Yours Now</h3>
         <p className={styles.valuesText1}>For more information on how we can help assist you with your bottled water requirements and support your promotions or events.</p>
-        <a href="/contact" className={styles.button1}>
+        <a href="/contact-us" className={styles.button1}>
           Order Now
         </a>
       </div>
@@ -153,13 +154,13 @@ export const fields = (
     <TextField
       name="heading"
       label="Header Heading"
-      default="About BaubaAqua"
+      default="About BaubAqua"
     />
 
     <TextField
       name="story"
       label="Our Story"
-      default="BaubaAqua was founded with one simple belief: everyone deserves access to clean, refreshing water. Locally produced and carefully purified, our water is designed to meet the highest quality standards while supporting our community and environment."
+      default="BaubAqua was founded with one simple belief: everyone deserves access to clean, refreshing water. Locally produced and carefully purified, our water is designed to meet the highest quality standards while supporting our community and environment."
       multiple
     />
 
