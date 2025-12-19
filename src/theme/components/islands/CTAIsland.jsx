@@ -8,7 +8,7 @@ export default function CTAIsland({ fieldValues }) {
     <div className={styles.ctaContainer}>
       {ctaPrimary && (
      <a
-        href="/contact"
+        href="/contact-us"
         className={styles.primaryBtn}
       >
         {ctaPrimary}

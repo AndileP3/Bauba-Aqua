@@ -10,10 +10,10 @@ export default function HeaderIsland({ fieldValues = {} }) {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   
   const defaultLinks = [
-    { text: "Home", href: "/home", isButton: "false" },
-    { text: "About", href: "/about", isButton: "false" },
-    { text: "Products", href: "/products", isButton: "false" },
-    { text: "Contact", href: "/contact", isButton: "true" },
+    { text: "Home", href: "/home-1", isButton: "false" },
+    { text: "About", href: "/about-us", isButton: "false" },
+    { text: "Services", href: "/our-services", isButton: "false" },
+    { text: "Contact", href: "/contact-us", isButton: "true" },
   ];
 
   const safeNavLinks = 
