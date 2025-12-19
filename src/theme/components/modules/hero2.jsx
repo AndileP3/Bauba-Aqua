@@ -2,11 +2,12 @@
 import { ModuleFields, TextField, ImageField } from "@hubspot/cms-components/fields";
 import { Island } from "@hubspot/cms-components";
 import CTAIsland from "../islands/CTAIsland?island";
-import heroVideo from "../../assets/waterfall.mp4";
+// import heroVideo from "../../assets/waterfall.mp4";
 
 
 import styles from "../../styles/hero2.module.css";
 import fallbackImage from "../../assets/1bottle.png";
+import backgroundImage from "../../assets/back.png";
 
 export function Component({ fieldValues = {} }) {
   const {
@@ -22,11 +23,11 @@ export function Component({ fieldValues = {} }) {
   return (
      <section className={styles.heroSection}>
       {/* VIDEO BACKGROUND */}
-      <div className={styles.heroBackground}>
+      {/* <div className={styles.heroBackground}>
         <video autoPlay muted loop playsInline className={styles.heroVideo}>
           <source src={heroVideo} type="video/mp4" />
         </video>
-      </div>
+      </div> */}
 
       {/* OVERLAY */}
       <div className={styles.heroOverlay}>
@@ -44,13 +45,17 @@ export function Component({ fieldValues = {} }) {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className={styles.heroRight}>
-            <img
-              src={sideImage}
-              alt="Hero visual"
-              className={styles.heroImage}
-            />
-          </div>
+      <div
+  className={styles.heroRight}
+  style={{ backgroundImage: `url(${backgroundImage})` }}
+>
+  <img
+    src={sideImage}
+    alt="Hero visual"
+    className={styles.heroImage}
+  />
+</div>
+
 
         </div>
       </div>
@@ -65,12 +70,12 @@ export const fields = (
     <TextField
       name="title"
       label="Hero Title"
-      default="Unify Your CRM, Boost Adoption, Transform Your Operations"
+      default="Pure Water Solutions That Power Healthier Living"
     />
     <TextField
       name="subtitle"
       label="Hero Subtitle"
-      default="We help CIOs and CRM leaders integrate Dynamics 365, Azure, and Power Platform."
+      default="We help homes and businesses access fresh, purified water. On time, every time."
     />
 
      
@@ -81,10 +86,8 @@ export const fields = (
     />
 
 
-    <TextField name="ctaPrimary" label="Primary CTA Text" default="Book a Consultation" />
+    <TextField name="ctaPrimary" label="Primary CTA Text" default="Place an Order" />
     <TextField name="ctaPrimaryLink" label="Primary CTA Link" default="#" />
-    <TextField name="ctaSecondary" label="Secondary CTA Text" default="View Case Studies" />
-    <TextField name="ctaSecondaryLink" label="Secondary CTA Link" default="#" />
   </ModuleFields>
 );
 
