@@ -5,7 +5,6 @@
 
 A fast, component-driven website built with **React and HubSpot CMS** for showcasing and managing Bauba Aqua’s water services, products, and content.
 
-[Live Site](#) · [Report Bug](#) · [Request Feature](#)
 
 </div>
 
