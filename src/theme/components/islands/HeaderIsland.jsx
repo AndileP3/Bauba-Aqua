@@ -71,7 +71,7 @@ export default function HeaderIsland({ fieldValues = {} }) {
 
       {/* LOGO */}
       <div className={styles.logoContainer}>
-        <a href="/">
+        <a href="/home-1">
           <img
             src={logoSrc}
             alt={logoText}
