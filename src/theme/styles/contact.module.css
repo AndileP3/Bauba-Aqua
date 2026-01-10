@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@300;400;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contactSection {
+  font-family: "Science Gothic", sans-serif;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  max-width: 1300px;
+  margin: auto;
+  background: linear-gradient(135deg, #e0f7ff, #c2e7ff);
+}
+
+/* ================= HEADER ================= */
+.topHeadingWrapper {
+  padding: 3rem 2rem;
+  border-radius: 14px;
+  background:
+    linear-gradient(rgba(0, 20, 40, 0.46), rgba(0,30,60,.8)),
+    url("../assets/banner.jpg") center/cover no-repeat;
+  box-shadow: 0 12px 40px rgba(0,0,0,.3);
+  margin: 2rem 3rem 4rem;
+}
+
+.heading {
+  color: #fff;
+  font-size: 2.8rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+/* ================= INTRO ================= */
+.introBlock {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.introBlock h3 {
+  font-size: 2rem;
+  color: #54a7ff;
+  margin-bottom: 1rem;
+}
+
+.introBlock p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #2a373dff;
+}
+
+/* ================= CONTACT GRID ================= */
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin: 0 3rem 6rem;
+}
+
+.contactCard,
+.formCard {
+  background: #25517a;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+
+.contactCard h4,
+.formCard h4 {
+  font-size: 1.6rem;
+  color: #5fe5fdff;
+  margin-bottom: 1.5rem;
+}
+
+.infoItem {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ================= FORM ================= */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #cce9ff;
+  font-family: inherit;
+  font-size: .95rem;
+}
+
+.contactForm textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.contactForm button {
+  margin-top: 10px;
+  padding: 0.9rem;
+  background-color: #1dcaf9;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.contactForm button:hover {
+  background-color: #0bb8e6;
+}
+
+/* ================= CTA ================= */
+.ctaSection {
+  background-color: #25517a;
+  padding: 4rem 3rem;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ctaContent {
+  flex: 1.2;
+}
+
+.ctaContent h3 {
+  font-size: 2.2rem;
+  color: #1dcaf9;
+  margin-bottom: 1rem;
+}
+
+.ctaContent p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #81e2ff;
+  margin-bottom: 2rem;
+}
+
+.buttonPrimary {
+  display: inline-block;
+  padding: 0.75rem 2.2rem;
+  background-color: #1dcaf9;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.buttonPrimary:hover {
+  background-color: #0bb8e6;
+}
+
+.ctaImage {
+  flex: 0.8;
+  text-align: center;
+}
+
+.ctaImage img {
+  max-width: 260px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .topHeadingWrapper {
+  padding: 2rem 1rem;
+  margin: 2rem 1rem 1rem;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+  .ctaSection {
+    flex-direction: column;
+    text-align: center;
+  }
+  .introBlock h3 {
+    margin-top: 1rem;
+  font-size: 1.1rem;
+  
+}
+.contactGrid {
+  gap: 10px;
+  margin: 0 1rem 2rem;
+}
+
+.contactCard,
+.formCard {
+  padding: 1rem;
+}
+
+.contactCard h4,
+.formCard h4 {
+  font-size: 1.3rem;
+}
+
+
+.ctaContent h3 {
+  font-size: 1.5rem;
+}
+
+}

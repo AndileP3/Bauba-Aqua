@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100;400;700;900&display=swap');
+
+.logosSection {
+  position: relative;
+  padding: 4rem 2rem;
+  background-image: url('../assets/trust.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+}
+
+.logosSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(72, 119, 150, 0.63); /* darkness level */
+  z-index: 0;
+}
+
+.logosSection * {
+  position: relative;
+  z-index: 1;
+}
+.heading {
+  font-family: 'Science Gothic', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #e8e8e8ff;
+}
+
+.logosContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  max-width: 250px;
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 2;
+ 
+}
+
+.logoImage {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

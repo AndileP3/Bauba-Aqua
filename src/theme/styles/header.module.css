@@ -1,0 +1,258 @@
+/* src/styles/header.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100;400;700;900&display=swap');
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-sizing: border-box;
+  height: 100px;
+  background: linear-gradient(to right, #ffffffff 0%, #cae9fdff 40%, rgba(28, 164, 255, 1) 100%);
+}
+
+.logoContainer {
+  flex: 1;
+  display: flex;
+  justify-content: left;
+}
+
+.logoImg {
+  
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  z-index: 1002;
+}
+
+/* DESKTOP NAV */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+
+.nav a {
+  font-family: 'Science Gothic', sans-serif;
+  color: #ffffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.nav a:hover {
+  color: #0063a0ff;
+  border-bottom: 2px solid #0063a0ff;
+}
+
+.nav a.contactBtn {
+  padding: 8px 22px;
+  background: #00749aff;
+  border-radius: 6px;
+  color: #ffffffff;
+  font-weight: 600;
+  border-bottom: none;
+  transition: background 0.5s ease;
+}
+
+.nav a.contactBtn:hover {
+  background: #6cdfffff;
+}
+
+/* MOBILE TOGGLE BUTTON - Positioned left like working example */
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #c5d9e7ff;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1002;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+}
+
+/* Hamburger icon */
+.menuIcon,
+.menuIcon::before,
+.menuIcon::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #ffffffff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.menuIcon {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menuIcon::before {
+  top: -8px;
+  left: 0;
+}
+
+.menuIcon::after {
+  top: 8px;
+  left: 0;
+}
+
+/* Active state - transforms to X */
+.menuToggle.active .menuIcon {
+  background: transparent;
+}
+
+.menuToggle.active .menuIcon::before {
+  transform: rotate(45deg);
+  top: 0;
+  background: #ffffffff;
+}
+
+.menuToggle.active .menuIcon::after {
+  transform: rotate(-45deg);
+  top: 0;
+  background: #ffffffff;
+}
+
+/* MOBILE NAV - Exactly like working example pattern */
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  gap: 40px;
+  padding: 2rem;
+  background: linear-gradient(135deg, #00749aca 0%, rgba(28, 164, 255, 0.8) 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1001;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CRITICAL: This is the working pattern - .show class */
+.mobileNav.show {
+  display: flex;
+}
+
+.mobileNav a {
+  font-family: 'Science Gothic', sans-serif;
+  color: #ffffffff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px 30px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.mobileNav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: #ffffffff;
+  transition: width 0.3s ease;
+}
+
+.mobileNav a:hover {
+  color: #cae9fdff;
+}
+
+.mobileNav a:hover::after {
+  width: 80%;
+}
+
+.mobileNav a.mobileContactBtn {
+  padding: 15px 40px;
+  background: #ffffffff;
+  color: #00749aff;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  margin-top: 20px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.mobileNav a.mobileContactBtn:hover {
+  background: transparent;
+  color: #ffffffff;
+  border-color: #ffffffff;
+}
+
+.mobileNav a.mobileContactBtn::after {
+  display: none;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .header {
+    padding: 15px 25px;
+  }
+
+  .logoImg {
+    height: 60px;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+}
+
+/* MOBILE - Exactly like working example */
+@media (max-width: 768px) {
+  
+  .header {
+    padding: 12px 20px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menuToggle {
+    display: block;
+  }
+
+  .mobileNav {
+    display: none; /* Hidden by default, shown by .show class */
+  }
+  
+  .mobileNav.show {
+    display: flex;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+  .menuToggle {
+    display: none !important;
+  }
+  
+  .mobileNav {
+    display: none !important;
+  }
+}
