@@ -8,7 +8,16 @@
 {% block body %}
   {# Test #}
   <main>
+   {% module "header" path="../components/modules/Header.jsx", label="Header" %}
+
    {% module "hero_section" path="../components/modules/hero2.jsx", label="Hero Section" %}
+   {% module "whyus" path="../components/modules/WhyUs.jsx", label="Why Us" %}
+    {% module "Trust" path="../components/modules/Trust.jsx", label="Trust" %}
+    {% module "homeAbout" path="../components/modules/homeAbout.jsx", label="About Us" %}
+    {% module "steps" path="../components/modules/steps.jsx", label="Steps" %}
+     {% module "brand" path="../components/modules/Brand.jsx", label="Brand" %}
+
+    {% module "footer" path="../components/modules/FooterModule.jsx", label="Footer" %}
   </main>
 
 {% endblock body %}
