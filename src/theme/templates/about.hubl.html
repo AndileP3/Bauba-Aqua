@@ -6,6 +6,13 @@
 {% extends "./layouts/base.hubl.html" %}
 
 {% block body %}
-  
+  {# About Page #}
+  <main>
+   {% module "header" path="../components/modules/Header.jsx", label="Header" %}
+    
+   {% module "about" path="../components/modules/About.jsx", label="About  Section" %}
 
+    {% module "footer" path="../components/modules/FooterModule.jsx", label="Footer" %}
+  </main>
+  
 {% endblock body %}
