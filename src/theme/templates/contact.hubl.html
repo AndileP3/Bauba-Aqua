@@ -7,6 +7,11 @@
 
 {% block body %}
   {# Test #}
-  
+  <main>
+   {% module "header" path="../components/modules/Header.jsx", label="Header" %}
+
+   {% module "contact" path="../components/modules/Contact.jsx", label="Contact Section" %}
+    {% module "footer" path="../components/modules/FooterModule.jsx", label="Footer" %}
+  </main>
 
 {% endblock body %}
